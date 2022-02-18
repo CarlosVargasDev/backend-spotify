@@ -1,5 +1,5 @@
-const PORT = process.env.PORT || 3000
-const URL_PUBLIC = process.env.URL_PUBLIC || '/'
+const PORT = process.env.SERVER_PORT || 3000
+const URL_PUBLIC = process.env.SERVER_URL || '/'
 
 
 const dataMusic = [
