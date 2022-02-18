@@ -1,5 +1,13 @@
-const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
-const URL_PUBLIC = process.env.SERVER_URL || '/'
+const PORT = process.env.PORT || process.env.SERVER_PORT || 3000;
+const URL_PUBLIC = process.env.SERVER_URL || '/';
+let URL = "";
+
+//Verificamos si estamos en local
+if(URL_PUBLIC !== "http://localhost"){
+    URL = URL_PUBLIC;
+}else{
+    URL = `${URL_PUBLIC}:${PORT}`
+}
 
 
 const dataMusic = [
@@ -17,7 +25,7 @@ const dataMusic = [
             "start": 0,
             "end": 333
         },
-        "url": `${URL_PUBLIC}:${PORT}/track.mp3`
+        "url": `${URL}/track.mp3`
     },
     {
         "_id": 2,
@@ -33,7 +41,7 @@ const dataMusic = [
             "start": 0,
             "end": 333
         },
-        "url": `${URL_PUBLIC}:${PORT}/track-1.mp3`
+        "url": `${URL}/track-1.mp3`
     },
     {
         "_id": 3,
@@ -49,7 +57,7 @@ const dataMusic = [
             "start": 0,
             "end": 333
         },
-        "url": `${URL_PUBLIC}:${PORT}/track-2.mp3`
+        "url": `${URL}/track-2.mp3`
     },
     {
         "_id": 4,
@@ -65,7 +73,7 @@ const dataMusic = [
             "start": 0,
             "end": 333
         },
-        "url": `${URL_PUBLIC}:${PORT}/track-4.mp3`
+        "url": `${URL}/track-4.mp3`
     },
     {
         "_id": 5,
@@ -81,7 +89,7 @@ const dataMusic = [
             "start": 0,
             "end": 333
         },
-        "url": `${URL_PUBLIC}:${PORT}/track-3.mp3`
+        "url": `${URL}/track-3.mp3`
     },
     {
         "_id": 6,
@@ -97,7 +105,7 @@ const dataMusic = [
             "start": 0,
             "end": 333
         },
-        "url": `${URL_PUBLIC}:${PORT}/track-5.mp3`
+        "url": `${URL}/track-5.mp3`
     },
     {
         "_id": 7,
@@ -113,7 +121,7 @@ const dataMusic = [
             "start": 0,
             "end": 333
         },
-        "url": `${URL_PUBLIC}:${PORT}/track-6.mp3`
+        "url": `${URL}/track-6.mp3`
     },
     {
         "_id": 8,
@@ -129,7 +137,7 @@ const dataMusic = [
             "start": 0,
             "end": 333
         },
-        "url": `${URL_PUBLIC}:${PORT}/track-7.mp3`
+        "url": `${URL}/track-7.mp3`
     }
 ]
 
