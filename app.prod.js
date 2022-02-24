@@ -2,10 +2,10 @@ require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const app = express()
-const { dbConnect } = require('./src/DB/conection')
+const { dbConnect } = require('./src/DB/connectDB')
 
 // Obtenemos variables de entorno
-const SERVER_PORT = process.env.PORT ||process.env.SERVER_PORT || 3000;
+const SERVER_PORT = process.env.PORT ||process.env.SERVER_PORT;
 const SERVER_URL = process.env.SERVER_URL || "localhost";
 
 
